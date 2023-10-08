@@ -1,18 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container" style="color:white"> 
         <h1>Admin Dashboard</h1>
 
         <div class="users-management">
             <h2>User Management</h2>
             <table>
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Created At</th>
-                    <th>Actions</th>
-                </tr>
+
                 @foreach ($users as $user)
                     <tr>
                         <td>{{ $user->id }}</td>

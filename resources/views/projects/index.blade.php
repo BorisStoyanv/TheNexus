@@ -17,7 +17,15 @@
                         <p>{{ $project->description }}</p>
                         
                         @if (auth()->user() && auth()->user()->elo >= $project->min_skill_points)
-                            <a href="#" class="my-button">Join</a>
+                                    <details>
+                                    <summary class="button">Join</summary>
+                                    <div>
+                                        <br><br><br>
+                                         <p>{{ $project->contact }}</p>
+                                         <p>If you are interested in this project start comunicating with the owner </p>
+                                    </div>
+                                    </details>
+                            
                         @else
                             <p>You don't meet the skill requirement to join this project.</p>
                         @endif

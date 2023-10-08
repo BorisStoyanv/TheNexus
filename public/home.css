@@ -339,17 +339,17 @@ text-align: center;
 
 .my-link {
     font-size: 18px;
-    color: white; /* Set your desired link text color */
+    color: white; 
     text-decoration: underline;
 }
 
 .my-link:hover {
-    color: #ffcb39; /* Set your desired link hover color */
+    color: #ffcb39;
 }
 
 .my-description {
-    color: white; /* Set your desired description text color */
-    margin-top: 5px; /* Add margin to separate descriptions from links */
+    color: white; 
+    margin-top: 5px; 
 }
 .project-box-container {
     display: flex;
@@ -358,25 +358,63 @@ text-align: center;
 }
 
 .project-box {
-    background-color: #8723ce; /* Set the background color to purple */
-    color: white; /* Set text color to white */
-    padding: 20px; /* Add padding to create space between content and box */
-    margin: 10px; /* Add margin to create spacing between project boxes */
-    border-radius: 10px; /* Add rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
-    overflow: hidden; /* Hide overflowing content */
-    flex-grow: 1; /* Allow boxes to grow equally */
-    max-width: 300px; /* Set the maximum width for each box */
-    min-width: 300px; /* Set the minimum width for each box */
-    height: 250px; /* Set a fixed height for each box */
+    background-color: #8723ce; 
+    color: white; 
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    overflow: hidden;
+    flex-grow: 1; 
+    max-width: 300px; 
+    min-width: 300px; 
+    height: 250px;
 }
 
-/* Style the project information inside the box */
 .project-info {
     text-align: center;
 }
 
-/* Style the description text with a smaller font size */
 .project-description {
-    font-size: 14px; /* Adjust the font size as needed */
+    font-size: 14px; 
 }
+
+details > div {
+    width: 20em;
+    border: 2px solid black;
+    padding: 1em 2em;
+    position: fixed;
+    width: 360px;
+    height: 280px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: rgb(51, 0, 75);
+    z-index: 3;
+    box-shadow: 10px 10px 10px DIMGRAY;
+  }
+  
+  details[open] summary::after { 
+    content: "×"; 
+    font-size: 28pt;  
+    position: fixed; 
+    right: calc(50vw - 360px / 2 - 2em); 
+    top:  calc(50vh - 240px / 2 - 2em);
+    padding: 5pt 10pt;
+    z-index: 9;
+  }
+  
+  details[open] summary::before {
+    content: '';
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    z-index: 1;
+  }
